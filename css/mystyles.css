@@ -1,0 +1,92 @@
+/* Styles for MyGolfStats */
+/* Palette
+#055508    5,85,8       Dark Green
+#238926    35,137,38    Med Green
+#89d85e    137,216,94   Light Green
+#f4e9c9    244,233,201  Sand Trap Off-White
+#006e89    0,110,137    Water Blue
+#57a5c9    87,165,201   Sky Blue
+*/
+
+/* Homepage */
+#home {
+	text-align: center;
+	background: url(../images/grass_bg.jpg);
+}
+
+/* Homepage Logo */
+#home img {
+	width: 80%;
+	max-width: 492px;
+	box-shadow: 0 0 20px 2px black;
+}
+
+/* Main buttons on homepage */
+#home .ui-content a {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Clubs icon */
+.ui-icon-clubs {
+	background-image: url(../images/clubs_icon.png);
+	background-size: 18px 18px;
+}
+
+/* Chart icon */
+.ui-icon-chart {
+	background-image: url(../images/chart_icon.png);
+	background-size: 18px 18px;
+}
+
+/* Settings Page */
+#settings legend {
+	font-size: 1.3em;
+	text-align: center;
+}
+
+/* Header on Current Hole and Scorecard Pages */
+#curr_hole > div[data-role="header"] > p:first-child,
+#scorecard > div[data-role="header"] > p:first-child {
+	width: 60%;
+	margin-left: 10px;
+	margin-bottom: .3em;
+}
+
+#curr_hole > div[data-role="header"] > p:nth-child(2),
+#scorecard > div[data-role="header"] > p:nth-child(2) {
+	width: 60%;
+	margin-top: 0;
+	font-size: .8em;
+	text-align: right;
+}
+
+#curr_hole > div[data-role="header"] > a,
+#scorecard > div[data-role="header"] > a {
+	margin-top: 1em;
+}
+
+/* curr_hole h1 - i.e. Hole 1 */
+#curr_hole > div[data-role="content"] > h1 {
+	margin: 0;
+}
+
+/* myscore slider label */
+label[for="myscore_slider"] {
+	font-size: 1.3em;
+	text-align: center;
+}
+
+/* Stats Container on curr_hole screen */
+#stats_container legend {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+
+
+
+
+
+	

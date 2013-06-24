@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.cascadia.MyGolfFacts"
+        versionCode="1" 
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+    
+    <name>MyGolfFacts</name>
+
+    <description>
+        App that helps you keep track of your golf statistics.
+    </description>
+
+    <author href="http://www.benthedeveloper.com" email="ben@benthedeveloper.com">
+        Ben Harrison 
+    </author>
+    
+    <!-- App icon -->
+    <icon src="icon.png" />
+    
+    <!-- App splash screen -->
+    <!-- <gap:splash src="splash.png" /> -->
+    
+    <!-- PhoneGap Version -->
+    <preference name="phonegap-version" value="2.7.0" />
+    
+    <!-- Allow portrait orientation only -->
+    <preference name="orientation" value="portrait" />
+    
+    <!-- PhoneGap Features this app uses: -->
+    <feature name="http://api.phonegap.com/1.0/network"/> <!-- network permissions -->
+    <feature name="http://api.phonegap.com/1.0/file" /> <!-- file write permissions -->
+
+</widget>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>MyGolfStats</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<!-- MyGolfFacts theme stylesheet from ThemeRoller -->
+		<link rel="stylesheet" href="css/themes/MyGolfFacts.min.css" />
+		
+		<!-- Local JQuery + JQuery Mobile stylesheet and scripts -->
+		<link rel="stylesheet" href="css/jquery.mobile.structure-1.3.1.min.css">
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/jquery.mobile-1.3.1.min.js"></script>
+		
+		<!-- PhoneGap Scripts -->
+		<!-- PhoneGap Build -->
+		<script src="phonegap.js"></script>
+		<!-- Local ios Testing for ripple -->
+		<!-- <script src="js/cordova.js"></script> -->
+		
+		<script src="js/myscripts.js"></script>
+		<link rel="stylesheet" href="css/mystyles.css">
+	</head>
+	<body>
+		
+		
+		<!-- Page: home -->
+		<div id="home"
+		data-role="page"
+		data-theme="a"
+		data-title="MyGolfStats - Home">
+			<div data-role="content">
+				<img src="images/logo_silouette.png" alt="MyGolfStats Logo">
+				<a href="#course_select" data-role="button" data-icon="clubs">Play a Round</a>
+				<a href="#my_stats" data-role="button" data-icon="chart">My Stats</a>
+				<a href="#settings" data-role="button" data-icon="gear">Settings</a>
+			</div>
+			<div data-role="footer" data-position="fixed" data-theme="b">
+				<a href="#help" data-icon="info" class='ui-btn-right' data-rel="dialog">Help</a>
+				<span class="ui-title"></span>
+			</div>
+		</div><!-- end home page -->
+		
+		
+		<!-- Page: course_select -->
+		<div id="course_select" data-role="page">
+			<div data-role="header" data-position="fixed" data-id="mgf_header">
+				<h1>Select Course</h1>
+			</div><!-- end header -->
+			<div data-role="content">
+				<!-- new course button -->
+				<a href="#create_new_course" data-role="button" data-icon="arrow-r" data-iconpos="right" data-transition="slide">Create New Course</a>
+				<!-- list of previously played courses -->
+				<h2>Recently Played:</h2>
+				<ul data-role="listview">
+					<li><a href="#curr_hole">
+						<h3>Previously Played Course 1</h3>
+						<p>blue tees</p>
+					</a></li>
+					<li><a href="#curr_hole">
+						<h3>Previously Played Course 2</h3>
+						<p>white tees</p>
+					</a></li>
+				</ul>
+			</div><!-- end content -->
+			<div data-role="footer" data-position="fixed" data-theme="a" data-id="mgf_footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-role="button" data-icon="home">Home</a></li>
+						<li><a href="#settings" data-role="button" data-icon="gear">Settings</a></li>
+						<li><a href="#help" data-role="button" data-icon="info" data-rel="dialog">Help</a></li>
+					</ul>
+				</div><!-- end navbar -->
+			</div><!-- end footer -->
+		</div><!-- end course_select page -->
+		
+		
+		<!-- Page: my_stats -->
+		<div id="my_stats" data-role="page">
+			<div data-role="header">
+				<h1>My Stats</h1>
+			</div>
+			<a href="#home">Home</a>
+		</div><!-- end my_stats page -->
+		
+		
+		<!-- Page: settings -->
+		<div id="settings" data-role="page">
+			<div data-role="header" data-position="fixed" data-id="mgf_header">
+				<h1>Stats Settings</h1>
+			</div><!-- end header -->
+			<div data-role="content">
+				<form>
+					<fieldset data-role="controlgroup">
+						<legend>Keep Track Of:</legend>
+					    <input type="checkbox" name="chk_settings_putts" id="chk_settings_putts" checked>
+					    <label for="chk_settings_putts">Putts</label>
+					    <input type="checkbox" name="chk_settings_fairwayhit" id="chk_settings_fairwayhit" checked>
+					    <label for="chk_settings_fairwayhit">Fairways Hit</label>
+					    <input type="checkbox" name="chk_settings_gir" id="chk_settings_gir" checked>
+					    <label for="chk_settings_gir">Greens in Regulation</label>
+					    <input type="checkbox" name="chk_settings_penalty" id="chk_settings_penalty" checked>
+					    <label for="chk_settings_penalty">Penalty Strokes</label>
+					    <input type="checkbox" name="chk_settings_upndown" id="chk_settings_upndown" checked>
+					    <label for="chk_settings_upndown">Up and Downs</label>
+					    <input type="checkbox" name="chk_settings_sandsave" id="chk_settings_sandsave" checked>
+					    <label for="chk_settings_sandsave">Sand Saves</label>
+					</fieldset>
+				</form>
+			</div><!-- end content -->
+			<div data-role="footer" data-position="fixed" data-id="mgf_footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" id="settings_cancel" data-role="button" data-rel="back" data-icon="delete" data-transition="slide">Cancel</a></li>
+						<li><a href="#" id="settings_save" data-role="button" data-rel="back" data-icon="check" data-transition="slide">Save</a></li>
+					</ul>
+				</div><!-- end navbar -->
+			</div><!-- end footer -->
+		</div><!-- end settings page -->
+		
+		
+		<!-- Page: help -->
+		<div id="help" data-role="page" data-close-btn="right" data-theme="b">
+			<div data-role="header" data-position="fixed" data-id="mgf_header">
+				<h1>Help</h1>
+			</div><!-- end header -->
+			<div data-role="content">
+				<h2>About MyGolfFacts</h2>
+				<p>MyGolfFacts is an app to help you keep track of your golf statistics, so you can improve
+					your game. If you keep track of your stats, over time you'll be able to identify areas
+					where you need to practice more.</p>
+				<h2>How to Use</h2>
+				<p>On the Settings page, you can select which stats you want to track. You can track as many
+					or as little statistics as you like</p>
+				<p>Select Play a Round, and begin playing. Select "Create New Course" to save the course data
+					as you play. After playing a course once, you can save it, so you don't need to enter
+					the data for the course every time. Possibly in the future the app will be able to
+					download course data so you don't have to enter it in manually.</p>
+				<p>On the Home screen, select My Stats to view all your stats.</p>
+				<a href="#" data-role="button" data-rel="back">Ok!</a>
+			</div><!-- end content -->
+		</div><!-- end help page -->
+		
+		
+		<!-- Page: Create New Course -->
+		<div id="create_new_course" data-role="page">
+			<div data-role="header" data-position="fixed" data-id="mgf_header">
+				<h1>New Course</h1>
+			</div><!-- end header -->
+			<div data-role="content">
+				<!-- New Course Name textbox -->
+				<label for="clear-demo">Name of Course:</label>
+				<input type="text" name="new_course_textbox" id="new_course_textbox" value="" data-clear-btn="true" />
+				<!-- Pick tees to play from -->
+				<fieldset data-role="controlgroup">
+				  <legend>Tee Color:</legend>
+				  <input type="radio" name="radio-choice" id="white_tee" value="white" checked="checked" />
+				  <label for="white_tee">White</label>
+				 
+				  <input type="radio" name="radio-choice" id="blue_tee" value="blue" />
+				  <label for="blue_tee" style="color: blue">Blue</label>
+				 
+				  <input type="radio" name="radio-choice" id="red_tee" value="red" />
+				  <label for="red_tee" style="color: red">Red</label>
+				  
+				  <input type="radio" name="radio-choice" id="black_tee" value="black" />
+				  <label for="black_tee" style="color: black">Black</label>
+				  
+				  <input type="radio" name="radio-choice" id="gold_tee" value="gold" />
+				  <label for="gold_tee" style="color: gold">Gold</label>
+				</fieldset>
+			</div><!-- end content -->
+			<div data-role="footer" data-position="fixed" data-theme="a" data-id="mgf_footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#course_select" data-role="button" data-rel="back" data-icon="delete" data-transition="slide">Cancel</a></li>
+						<li><a href="#curr_hole" data-role="button" data-icon="arrow-r" data-transition="slide">Play!</a></li>
+					</ul>
+				</div><!-- end navbar -->
+			</div><!-- end footer -->
+		</div><!-- end create_new_course page -->
+		
+		
+		<!-- Page: Current Hole -->
+		<div id="curr_hole" data-role="page">
+			<div data-role="header" data-position="fixed">
+				<!-- PLACEHOLDER - insert course name here -->
+				<p>Buttery Hills Golf Course</p>
+				<!-- PLACEHOLDER - insert tee color here -->
+				<p>Blue Tees</p>
+				<a href="#scorecard" data-role="button" data-icon="grid" class="ui-btn-right" data-transition="flip">Scorecard</a>
+			</div><!-- end header -->
+			<div data-role="content">
+				<h1>
+					<!-- Hole Number Inserted Here -->
+					Hole 1
+				</h1>
+				<form>
+					<div data-role="fieldcontain" id="holeinfo_container">
+					    <label for="par">Par:</label>
+					    <select name="par" id="par">
+					    	<option value="0"></option>
+					        <option value="3">3</option>
+					        <option value="4">4</option>
+					        <option value="5">5</option>
+					    </select>
+					    <label for="yard_slider">Yards:</label>
+						<input type="range" name="yard_slider" id="yard_slider" value="300" min="50" max="800">
+					</div><!-- end holeinfo_container -->
+					<div data-role="fieldcontain" id="myscore_container">
+						<label for="myscore_slider">My Score:</label>
+						<input type="range" name="myscore_slider" id="myscore_slider" value="4" min="1" max="10" data-theme="b">
+					</div><!-- end myscore_container -->
+					<div data-role="fieldcontain" id="stats_container">
+						<fieldset>
+						    <legend>Stats:</legend>
+						    <input type="checkbox" name="chk_fairway_hit" id="chk_fairway_hit">
+						    <label for="chk_fairway_hit">Hit Fairway</label>
+						    <input type="checkbox" name="chk_gir" id="chk_gir">
+						    <label for="chk_gir">Green In Regulation</label>
+						    <label for="slct_putts">Putts:</label>
+						    <select name="slct_putts" id="slct_putts">
+						    	<option value="0">0</option>
+						    	<option value="1">1</option>
+						    	<option value="2" selected="selected">2</option>
+						    	<option value="3">3</option>
+						    	<option value="4">4</option>
+						    	<option value="5">5</option>
+						    	<option value="6">6</option>
+						    </select>
+						    <label for="slct_penalty_strokes">Penalty Strokes:</label>
+						    <select name="slct_penalty_strokes" id="slct_penalty_strokes">
+						    	<option value="0">0</option>
+						    	<option value="1">1</option>
+						    	<option value="2">2</option>
+						    	<option value="3">3</option>
+						    	<option value="4">4</option>
+						    	<option value="5">5</option>
+						    	<option value="6">6</option>
+						    </select>
+						    <input type="checkbox" name="chk_upndown" id="chk_upndown">
+						    <label for="chk_upndown">Up and Down</label>
+						    <input type="checkbox" name="chk_sandsave" id="chk_sandsave">
+						    <label for="chk_sandsave">Sand Save</label>
+						</fieldset>
+					</div><!-- end stats_container -->
+				</form>
+			</div><!-- end content -->
+			<div data-role="footer" data-position="fixed" data-id="mgf_footer">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" data-role="button" data-icon="arrow-l" data-transition="slide">Prev. Hole</a></li>
+						<li><a href="#home" data-role="button" data-icon="home" data-transition="slide">Home</a></li>
+						<li><a href="#settings" data-role="button" data-icon="gear" data-transition="slide">Settings</a></li>
+						<li><a href="#" data-role="button" data-icon="arrow-r" data-transition="slide">Next Hole</a></li>
+					</ul>
+				</div><!-- end navbar -->
+			</div><!-- end footer-->
+		</div><!-- end curr_hole page -->
+		
+		
+		<!-- Page: Scorecard -->
+		<div id="scorecard" data-role="page">
+			<div data-role="header" data-position="fixed">
+				<!-- PLACEHOLDER - insert course name here -->
+				<p>Buttery Hills Golf Course</p>
+				<!-- PLACEHOLDER - insert tee color here -->
+				<p>Blue Tees</p>
+				<!-- Back Button -->
+				<a href="#curr_hole" data-role="button" data-rel="back" data-icon="back" data-transition="flip" class="ui-btn-right">Back</a>
+			</div><!-- end header -->
+			<div data-role="content">
+				<!-- Scorecard Table -->
+				<h1>Scorecard Table Goes Here</h1>
+			</div><!-- end content -->
+			<div data-role="footer" data-position="fixed" data-theme="a" data-id="mgf_footer">
+				
+			</div><!-- end footer-->
+		</div><!-- end scorecard page -->
+		
+	</body>
+</html>
